@@ -1,31 +1,44 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+  <div class="app">
+    <!-- left가 full-size이므로 left를 기준으로. -->
+    <LayLeft />
+    <div class="app__container">
+        <LayHeader />
+        <div class="app__container__box"> 
+          <div class="app__container__content">
+            <route-view />
+          </div>
+          <LayRight />
+        </div>
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { LayHeader, LayLeft, LayRight } from "./components/layouts";
 
-nav {
-  padding: 30px;
+export default {
+  components: {
+    LayHeader,
+    LayRight,
+    LayLeft,
+  },
+};
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<style lang="scss" scoped>
+.app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  &__container {
+    &__box {
+      display: flex;
+    }
+    &__content {
+      height: calc(100vh - 50px);
+      width: calc(100vw - 400px);
+      background-color: blue;
     }
   }
 }

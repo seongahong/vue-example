@@ -9,6 +9,9 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    children: [
+      // 여기에 라우팅 되는 컴포넌트 path, name, component 작성.
+    ]
   },
   {
     path: "/about",
