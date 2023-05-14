@@ -30,7 +30,7 @@ vue 설치부터 초기 환경세팅, router, vuex를 실습해본다.
 - 3.1. beforeUpdate: 데이터 변화가 일어나지만 렌더링이 다시 일어나기 전에 추가 작업이 가능함. DOM이 리렌더링되고 패치되기 직전에 실행.
 - 3.2. updated: 컴포넌트의 데이터가 변하여 리렌더링이 일어난 후에 실행 됨. 이때 data를 건드리게 되면 무한루프에 빠질 수 있음.
 
-4. Destroy(Destrucion)는 해체(소멸) 단계이다. beforeDestroy, destroyed 훅이 있다.
+4. Destroy(Destruction)는 해체(소멸) 단계이다. beforeDestroy, destroyed 훅이 있다.
 - 4.1. beforeDestroy: 컴포넌트가 소멸되기 직전에 호출된다. 해체 직전이기 떄문에 모든 속성에 접근이 가능하다.
 - 4.2. destroyed: 컴포넌트가 제거된 후에 호출된다. 모든 이벤트 리스너가 제거되고 모든 하위 컴포넌트들도 제거된다.
 
