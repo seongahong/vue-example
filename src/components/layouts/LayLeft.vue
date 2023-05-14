@@ -1,7 +1,5 @@
 <template>
-  <div class="left">
-    left
-  </div>
+  <div class="left">left</div>
 </template>
 
 <script>
@@ -11,10 +9,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- .left {
-    width: 200px;
-    min-width: 200px;
-    background-color: red;
-    height: 100vh;
- }
+.left {
+  width: 200px;
+  min-width: 200px;
+  background-color: rgb(252, 197, 197);
+  height: 100vh;
+}
 </style>
