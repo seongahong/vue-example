@@ -2,7 +2,7 @@
   <div class="left">
     <div class="left__view">Left</div>
     <div class="left__button">
-      <button @click="increase">increase</button>
+      <button @click="$store.commit('increaseCount', 5)">increase</button>
     </div>
   </div>
 </template>
@@ -10,11 +10,6 @@
 <script>
 export default {
   name: "LayLeft",
-  methods: {
-    increase() {
-      this.$store.state.count++;
-    },
-  },
 };
 </script>
 
