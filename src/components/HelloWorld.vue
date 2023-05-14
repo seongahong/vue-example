@@ -114,7 +114,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .hello {
-  height: calc(100vh - 50px);
   width: calc(100vw - 400px);
 }
 h3 {

@@ -31,9 +31,9 @@ export default {
   width: 100%;
   height: 100%;
   &__container {
+    width: 100%;
     &__box {
       display: flex;
-      width: 100vw;
       height: calc(100vh - 50px);
     }
   }
