@@ -34,8 +34,25 @@ export default new Vuex.Store({
   state: {
     count: 0,
   },
-  getters: {},
-  mutations: {},
+  // 상태값에 접근해 조작할 때 - computed 역할?
+  getters: {
+    // increase(state) {
+    //   return state.count++;
+    // },
+  },
+  // store의 상태값을 변경함. - method 역할?
+  mutations: {
+    increaseCount(state, n = 1) {
+      state.count += n;
+    },
+    decreaseCount(state, n = 1) {
+      state.count -= n;
+    },
+    resetCount(state) {
+      state.count = 0;
+    },
+  },
+  // 비동기 처리 담당
   actions: {},
   modules: {
     // a: moduleA,

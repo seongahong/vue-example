@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="content__view">Count: {{ count }}</div>
-    <button @click="reset">reset</button>
+    <button @click="$store.commit('resetCount')">reset</button>
   </div>
 </template>
 
@@ -51,11 +51,6 @@ export default {
     //})
 
     // #
-  },
-  methods: {
-    reset() {
-      this.$store.state.count = 0;
-    },
   },
 };
 </script>

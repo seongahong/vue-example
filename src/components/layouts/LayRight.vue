@@ -2,7 +2,7 @@
   <div class="right">
     <div class="right__view">Right</div>
     <div class="right">
-      <button @click="decrease">decrease</button>
+      <button @click="$store.commit('decreaseCount', 5)">decrease</button>
     </div>
   </div>
 </template>
@@ -10,11 +10,6 @@
 <script>
 export default {
   name: "LayRight",
-  methods: {
-    decrease() {
-      this.$store.state.count--;
-    },
-  },
 };
 </script>
 
